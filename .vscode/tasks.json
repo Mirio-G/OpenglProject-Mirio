@@ -12,7 +12,8 @@
                 "-L${workspaceFolder}/lib",
                 "${workspaceFolder}/src/*.cpp",
                 "${workspaceFolder}/src/glad.c",
-                "-lglfw3dll",
+                "-lglfw3",
+                "-lgdi32",
                 "-lopengl32",
                 "-o",
                 "${workspaceFolder}/notavirus.exe"
