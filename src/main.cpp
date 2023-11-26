@@ -61,8 +61,9 @@ int main(void)
     glEnable(GL_DEPTH_TEST);
 
     // D:\OpenglProject\shaders\shader.frag
-    Shader objectShader("D:/OpenglProject/shaders/lightingShader.vert", "D:/OpenglProject/shaders/lightingShader.frag");
-    Shader cubeShader("D:/OpenglProject/shaders/lightSource.vert", "D:/OpenglProject/shaders/lightSource.frag");
+    // C:\Projects\Graphics Engine\shaders\lightingShader.frag
+    Shader objectShader("C:/Projects/GraphicsEngine/shaders/lightingShader.vert", "C:/Projects/GraphicsEngine/shaders/lightingShader.frag");
+    Shader cubeShader("C:/Projects/GraphicsEngine/shaders/lightSource.vert", "C:/Projects/GraphicsEngine/shaders/lightSource.frag");
 
     
     int numOfPoints = 12;
