@@ -62,8 +62,8 @@ int main(void)
 
     // D:\OpenglProject\shaders\shader.frag
     // C:\Projects\Graphics Engine\shaders\lightingShader.frag
-    Shader objectShader("C:/Projects/GraphicsEngine/shaders/lightingShader.vert", "C:/Projects/GraphicsEngine/shaders/lightingShader.frag");
-    Shader cubeShader("C:/Projects/GraphicsEngine/shaders/lightSource.vert", "C:/Projects/GraphicsEngine/shaders/lightSource.frag");
+    Shader objectShader("C:/Projects/GraphicsEngine/src/shaders/lightingShader.vert", "C:/Projects/GraphicsEngine/src/shaders/lightingShader.frag");
+    Shader cubeShader("C:/Projects/GraphicsEngine/src/shaders/lightSource.vert", "C:/Projects/GraphicsEngine/src/shaders/lightSource.frag");
 
     
     int numOfPoints = 12;
@@ -166,6 +166,12 @@ int main(void)
         objectShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
         objectShader.setVec3("lightColor",  1.0f, 1.0f, 1.0f);
         objectShader.setVec3("lightPos", lightPos);
+        objectShader.setBool("debug", false);
+
+        if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+            objectShader.setBool("debug", true);
+        }
+        
 
         // create transformations
         glm::mat4 model         = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
